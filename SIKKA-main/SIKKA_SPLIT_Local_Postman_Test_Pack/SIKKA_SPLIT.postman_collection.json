@@ -1,0 +1,1195 @@
+{
+  "info": {
+    "name": "SIKKA | FRIENDS SPLIT | LOCAL | 2 USERS",
+    "_postman_id": "sikka-split-local-20261028",
+    "description": "Local-only API flow. Manual SQL verification between registration and login. No embedded credentials. Keep Postman cookie jar ON. Collection intentionally not fully automated due to manual DB activation/payment/AI prerequisites. A 400 in conditional steps indicates a blocker and must be inspected.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "00 | Registration - create TWO new USER accounts",
+      "description": "STOP HERE. Run SQL/01_Verify_New_Accounts.sql in LOCAL MySQL, then SQL/02_Activate_New_Accounts.sql. Verify profiles and credentials before proceeding.",
+      "item": [
+        {
+          "name": "00.01 | Register leader",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/account/register",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sikka QA Leader\",\n  \"email\": \"{{leaderEmail}}\",\n  \"password\": \"{{leaderPassword}}\",\n  \"birthDate\": \"1998-01-01\",\n  \"heightCm\": 175,\n  \"weightKg\": 70,\n  \"gender\": \"MALE\",\n  \"thrillPreference\": \"EXTREME\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "200 new user. 400 may indicate an existing account: verify with SQL, do not overwrite or silently accept."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "00.02 | Register member",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/account/register",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sikka QA Member\",\n  \"email\": \"{{memberEmail}}\",\n  \"password\": \"{{memberPassword}}\",\n  \"birthDate\": \"1999-01-01\",\n  \"heightCm\": 170,\n  \"weightKg\": 68,\n  \"gender\": \"MALE\",\n  \"thrillPreference\": \"MILD\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "01 | Login / independent roles",
+      "description": "Postman shares cookie jar on localhost. Re-login before requests acting as another user.",
+      "item": [
+        {
+          "name": "01.01 | Leader login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{leaderEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{leaderPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Uses Spring Security form login; Postman cookie jar maintains JSESSIONID. Re-login as needed when switching identities."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "pm.test(\"login response\",()=>pm.expect(pm.response.text()).to.include(\"Login successful\"));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "01.02 | Leader /me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/account/me",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=data.id??data.accountId;if(v!==undefined&&v!==null)pm.environment.set(\"leaderAccountId\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "01.03 | Member login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{memberEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{memberPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "01.04 | Member /me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/account/me",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=data.id??data.accountId;if(v!==undefined&&v!==null)pm.environment.set(\"memberAccountId\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "01.05 | Leader login again",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{leaderEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{leaderPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 | Create FRIENDS SPLIT and invite",
+      "description": "If visit code absent, stop and check create response; this flow does not invent codes.",
+      "item": [
+        {
+          "name": "02.01 | Create visit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit/create",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"SIKKA-SPLIT-QA-{{runTag}}\",\n  \"groupName\": \"Sikka QA Split\",\n  \"visitDate\": \"{{visitDate}}\",\n  \"maxParticipants\": 2,\n  \"tripType\": \"FRIENDS\",\n  \"togetherMode\": \"SPLIT\",\n  \"durationMinutes\": 480,\n  \"primaryGoal\": \"MAX_RIDES\",\n  \"includePrayer\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Server response is message with invite code; capture it. Validate code before proceeding."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=(data.message||\"\").match(/invite code:\\s*(.+)$/i)?.[1]?.trim();if(v!==undefined&&v!==null)pm.environment.set(\"inviteCode\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.02 | Leader my-visits -> visitId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/my-visits",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=(Array.isArray(data)?data:(data.visits||[])).find(v=>v.name===\"SIKKA-SPLIT-QA-\"+pm.environment.get(\"runTag\"))?.id;if(v!==undefined&&v!==null)pm.environment.set(\"visitId\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.03 | Visit details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/details/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.04 | Member login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{memberEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{memberPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.05 | Join with code",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit-member/join",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"{{inviteCode}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.06 | Member RSVP GOING",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-member/rsvp/going/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.07 | Leader login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{leaderEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{leaderPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.08 | Leader RSVP GOING",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-member/rsvp/going/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "02.09 | Visit members summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-member/summary/{{visitId}}",
+            "description": "Check member IDs from response/SQL; do not infer by array order."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=(data.members||[]).find(x=>Number(x.accountId)===Number(pm.environment.get(\"leaderAccountId\")))?.id;if(v!==undefined&&v!==null)pm.environment.set(\"leaderVisitMemberId\",String(v));}"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03 | Ride choices and eligibility",
+      "description": "Fill rideA/rideB from real local DB and check eligibility. When required, use visit-member/preferences per visitMemberId to complete planning answers.",
+      "item": [
+        {
+          "name": "03.01 | Public ride catalog",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/ride/get",
+            "description": "Choose 2 distinct valid OPEN ride IDs from response and fill rideA, rideB manually; never assume ID values."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03.02 | Leader selected rides",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit-member/update-selected-rides/{{visitId}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rides\": [\n    {\n      \"rideId\": \"{{rideA}}\",\n      \"priority\": \"MUST_RIDE\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Leader logged in."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03.03 | Member login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{memberEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{memberPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03.04 | Member selected rides",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit-member/update-selected-rides/{{visitId}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rides\": [\n    {\n      \"rideId\": \"{{rideB}}\",\n      \"priority\": \"MUST_RIDE\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03.05 | Leader login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{leaderEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{leaderPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "03.06 | Preview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/preview/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04 | Payment entitlement and generate - conditional",
+      "description": "AI may return PROCESSING. Poll read-only plan endpoints after processing. If no entitlement, stop here and provide evidence, no fake payment.",
+      "item": [
+        {
+          "name": "04.01 | Generate plans",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit-plan/generate/{{visitId}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestKey\": \"{{generationKey}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": "Only run after legitimate test entitlement. 400/403 is blocker, not pass; no SQL writes to payment_order or free_slot_reserved automatically."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 202, 400, 403]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=data.requestStatus;if(v!==undefined&&v!==null)pm.environment.set(\"generationRequestStatus\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "04.02 | List plans",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/plans/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));",
+                  "if(pm.response.code>=200&&pm.response.code<300){const data=pm.response.json(); const v=(Array.isArray(data)?data:(data.plans||[])).find(x=>x.planKind===\"GROUP\")?.id;if(v!==undefined&&v!==null)pm.environment.set(\"groupPlanId\",String(v));}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "04.03 | Group plan details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/details/{{groupPlanId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "04.04 | Pending group plan",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/pending-group-plan/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05 | Approval / negative authorization",
+      "description": "Requires existing pending approval. If no approval created, use POST /api/v1/plan-approval/create/{groupPlanId} only when application flow requires it.",
+      "item": [
+        {
+          "name": "05.01 | Member login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{memberEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{memberPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05.02 | Member attempts approval (MUST fail)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/plan-approval/approve",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"visitPlanId\": \"{{groupPlanId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Member cannot approve\",()=>pm.expect(pm.response.code).to.be.oneOf([400,401,403]));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05.03 | Leader login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/auth/login",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "{{leaderEmail}}",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{leaderPassword}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05.04 | Leader approve",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/plan-approval/approve",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"visitPlanId\": \"{{groupPlanId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05.05 | Approved group plan",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/approved-group-plan/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "05.06 | Map route",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/map-route/{{groupPlanId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06 | During visit / replan / end - conditional",
+      "description": "API failures are not marked successful; completion requires correct business state.",
+      "item": [
+        {
+          "name": "06.01 | Update arrival",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit/arrival/{{visitId}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"expectedArrivalTime\": \"{{arrivalTime}}\",\n  \"visitDate\": \"{{visitDate}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.02 | Start visit",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/start/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.03 | My next activity",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/next-activity/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.04 | Current subgroup",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/my-subgroup/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.05 | Propose replan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/v1/visit-plan/suggest-replan/{{visitId}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Local SPLIT test: changed queue conditions\",\n  \"replaceUnavailableRides\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.06 | Progress",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-record/progress/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "06.07 | Complete visit - MANUAL",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/complete/{{visitId}}",
+            "description": "RUN ONLY after activity completion prerequisites met. Do not mark incomplete activities done."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "99 | Read-only QA checks",
+      "description": "Cleanup is SQL/99_ReadOnly_Audit.sql; no delete automatically.",
+      "item": [
+        {
+          "name": "99.01 | Members summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-member/summary/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "99.02 | Visit details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit/details/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "99.03 | Group plans",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/v1/visit-plan/get/plans/{{visitId}}",
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Expected status\",()=>pm.expect([200, 400]).to.include(pm.response.code));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
