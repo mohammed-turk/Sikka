@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sikka payment test</title>
+<!-- Moyasar form. If the form does not appear, copy the two tags from Step 1 of https://docs.moyasar.com/getting-started/min-quickstart -->
+<link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.14.0/moyasar.css">
+<script src="https://cdn.moyasar.com/mpf/1.14.0/moyasar.js"></script>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 520px; margin: 24px auto; padding: 0 16px; }
+  label { display: block; margin-top: 12px; font-weight: 600; }
+  input { width: 100%; padding: 8px; box-sizing: border-box; }
+  button { margin-top: 16px; padding: 10px 16px; cursor: pointer; }
+  pre { background: #f4f4f4; padding: 12px; overflow: auto; white-space: pre-wrap; }
+  .box { border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-top: 16px; }
+</style>
+</head>
+<body>
+<h2>Sikka payment test (Moyasar test mode)</h2>
+<p>Test card: <b>4111 1111 1111 1111</b>, any future expiry, any CVC, name with two words.</p>
+
+<label>Email (organizer)</label><input id="email">
+<label>Password</label><input id="password" type="password">
+<label>Payment order id (from POST /payment-order/add/{visitId})</label><input id="order">
+<label>Moyasar publishable key (pk_test_...)</label><input id="pk">
+<button onclick="loadOrder()">1. Load order and show payment form</button>
+
+<div class="box"><b>Order</b><pre id="orderInfo">-</pre></div>
+<div class="mysr-form"></div>
+<div class="box"><b>Result</b><pre id="result">-</pre></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const api = '/api/v1/payment-order';
+
+function authHeader() {
+  return { 'Authorization': 'Basic ' + btoa($('email').value + ':' + $('password').value) };
+}
+
+async function loadOrder() {
+  sessionStorage.setItem('sikka-pay', JSON.stringify({
+    email: $('email').value, password: $('password').value, order: $('order').value, pk: $('pk').value }));
+  const res = await fetch(api + '/get/details/' + $('order').value, { headers: authHeader() });
+  const order = await res.json();
+  $('orderInfo').textContent = JSON.stringify(order, null, 2);
+  if (!res.ok) return;
+  if (order.status !== 'PENDING') { $('result').textContent = 'Order is not PENDING, nothing to pay.'; return; }
+
+  Moyasar.init({
+    element: '.mysr-form',
+    amount: Math.round(order.amountSar * 100),      // halalas
+    currency: 'SAR',
+    description: 'Sikka visit planning, order ' + order.id,
+    publishable_api_key: $('pk').value,
+    callback_url: location.origin + '/pay-test.html',
+    metadata: { order_id: String(order.id) },       // the backend checks this
+    methods: ['creditcard']
+  });
+}
+
+async function confirmFromReturn() {
+  const paymentId = new URLSearchParams(location.search).get('id');
+  const saved = JSON.parse(sessionStorage.getItem('sikka-pay') || 'null');
+  if (!paymentId || !saved) return;
+  $('email').value = saved.email; $('password').value = saved.password;
+  $('order').value = saved.order; $('pk').value = saved.pk;
+  $('result').textContent = 'Returned from Moyasar with payment ' + paymentId + '. Confirming...';
+  const res = await fetch(api + '/confirm/' + saved.order, {
+    method: 'POST',
+    headers: Object.assign({ 'Content-Type': 'application/json' }, authHeader()),
+    body: JSON.stringify({ paymentId })
+  });
+  $('result').textContent = 'HTTP ' + res.status + '\n' + JSON.stringify(await res.json(), null, 2);
+}
+confirmFromReturn();
+</script>
+</body>
+</html>

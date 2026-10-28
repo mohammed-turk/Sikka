@@ -1,0 +1,867 @@
+[
+  {
+    "name": "Falcons Flight",
+    "category": "THRILL",
+    "land": "CITY_OF_THRILLS",
+    "status": "UNAVAILABLE",
+    "thrillLevel": "EXTREME",
+    "minHeightCm": 130,
+    "maxHeightCm": 196,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Sirocco Tower",
+    "category": "THRILL",
+    "land": "CITY_OF_THRILLS",
+    "status": "UNAVAILABLE",
+    "thrillLevel": "EXTREME",
+    "minHeightCm": 130,
+    "maxHeightCm": 205,
+    "maxWeightKg": 135,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Adrena-Line",
+    "category": "FAMILY",
+    "land": "CITY_OF_THRILLS",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Windrider",
+    "category": "FAMILY",
+    "land": "CITY_OF_THRILLS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Iron Rattler",
+    "category": "THRILL",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 120,
+    "maxHeightCm": 205,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Saw Mill Falls",
+    "category": "FAMILY",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Sprockenator",
+    "category": "FAMILY",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "maxHeightCm": 195,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steel Stampede",
+    "category": "FAMILY",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 95,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Adventure Junction",
+    "category": "KIDS",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steam Town Carnival Games",
+    "category": "ARCADE",
+    "land": "STEAM_TOWN",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Amirat Al Buhayra",
+    "category": "FAMILY",
+    "land": "TWILIGHT_GARDENS",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Kaleidoscope Balloons",
+    "category": "FAMILY",
+    "land": "TWILIGHT_GARDENS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 90,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "The Enchanted Greenhouse",
+    "category": "FAMILY",
+    "land": "TWILIGHT_GARDENS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 90,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Twilight Express",
+    "category": "FAMILY",
+    "land": "TWILIGHT_GARDENS",
+    "status": "UNAVAILABLE",
+    "thrillLevel": "MILD",
+    "minHeightCm": 95,
+    "maxHeightCm": 205,
+    "adultCompanionRequired": true,
+    "companionRequiredBelowHeightCm": 130,
+    "recommendedMinAgeYears": 4,
+    "recommendedUnaccompaniedAgeYears": 8,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Twilight Gardens Carnival Games",
+    "category": "ARCADE",
+    "land": "TWILIGHT_GARDENS",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Big Splash",
+    "category": "FAMILY",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Into the Deep",
+    "category": "FAMILY",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 100,
+    "maxHeightCm": 200,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Sea Stallion",
+    "category": "FAMILY",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 120,
+    "maxHeightCm": 195,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Water Wheel",
+    "category": "FAMILY",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "thrillLevel": "LOW",
+    "minHeightCm": 90,
+    "maxWeightKg": 136,
+    "adultCompanionRequired": true,
+    "companionRequiredBelowHeightCm": 130,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Zoomaflooma",
+    "category": "WATER",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Aquatopia",
+    "category": "KIDS",
+    "land": "DISCOVERY_SPRINGS",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Arabian Carousel",
+    "category": "FAMILY",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 90,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Colossus",
+    "category": "THRILL",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 120,
+    "maxHeightCm": 196,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Expo Flyer",
+    "category": "FAMILY",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Gyrospin",
+    "category": "THRILL",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "thrillLevel": "EXTREME",
+    "minHeightCm": 135,
+    "maxHeightCm": 200,
+    "maxWeightKg": 135,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Roundabout",
+    "category": "FAMILY",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 105,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Grand Exposition Carnival Games",
+    "category": "ARCADE",
+    "land": "GRAND_EXPOSITION",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Canyon Charters",
+    "category": "FAMILY",
+    "land": "VALLEY_OF_FORTUNE",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 90,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Skywatch",
+    "category": "FAMILY",
+    "land": "VALLEY_OF_FORTUNE",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Spitfire",
+    "category": "THRILL",
+    "land": "VALLEY_OF_FORTUNE",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 130,
+    "maxHeightCm": 196,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Treasure Trail",
+    "category": "FAMILY",
+    "land": "VALLEY_OF_FORTUNE",
+    "status": "UNAVAILABLE",
+    "minHeightCm": 90,
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Citadel Thrills and Skills Land",
+    "category": "ARCADE",
+    "land": "CITADEL",
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Chicken & Sweets",
+    "kind": "RESTAURANT",
+    "land": "TWILIGHT_GARDENS",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Coffee & Treats",
+    "kind": "RESTAURANT",
+    "land": "DISCOVERY_SPRINGS",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Firepit BBQ",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "FULL_SERVICE",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Fish & Chippery",
+    "kind": "RESTAURANT",
+    "land": "GRAND_EXPOSITION",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "MULTINATIONAL"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Garden Tacos",
+    "kind": "RESTAURANT",
+    "land": "TWILIGHT_GARDENS",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "MEXICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Gearworks Eatery",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "MIDDLE_EASTERN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "High Octane Wings",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Hot Dogs",
+    "kind": "RESTAURANT",
+    "land": "DISCOVERY_SPRINGS",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Indian Spice Café",
+    "kind": "RESTAURANT",
+    "land": "VALLEY_OF_FORTUNE",
+    "serviceType": "BUFFETERIA",
+    "cuisineTypes": [
+      "INDIAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Navigators Club",
+    "kind": "RESTAURANT",
+    "land": "CITADEL",
+    "serviceType": "VIP_LOUNGE",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Navigators Restaurant",
+    "kind": "RESTAURANT",
+    "land": "CITADEL",
+    "serviceType": "FULL_SERVICE",
+    "cuisineTypes": [
+      "MIDDLE_EASTERN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Oasis Refreshments",
+    "kind": "RESTAURANT",
+    "land": "CITADEL",
+    "serviceType": "CART",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Popcorn",
+    "kind": "RESTAURANT",
+    "land": "GRAND_EXPOSITION",
+    "serviceType": "CART",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Primo's Pizzeria",
+    "kind": "RESTAURANT",
+    "land": "CITY_OF_THRILLS",
+    "serviceType": "BUFFETERIA",
+    "cuisineTypes": [
+      "ITALIAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Railway Refreshments",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Roasters",
+    "kind": "RESTAURANT",
+    "land": "GRAND_EXPOSITION",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Samosas & Karak",
+    "kind": "RESTAURANT",
+    "land": "VALLEY_OF_FORTUNE",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "INDIAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Snack Shack",
+    "kind": "RESTAURANT",
+    "land": "CITY_OF_THRILLS",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Snack Station",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steam Town Grill",
+    "kind": "RESTAURANT",
+    "land": "STEAM_TOWN",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Taste of Asia",
+    "kind": "RESTAURANT",
+    "land": "GRAND_EXPOSITION",
+    "serviceType": "BUFFETERIA",
+    "cuisineTypes": [
+      "PAN_ASIAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Travelers Café",
+    "kind": "RESTAURANT",
+    "land": "CITADEL",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Twilight Café",
+    "kind": "RESTAURANT",
+    "land": "TWILIGHT_GARDENS",
+    "serviceType": "BUFFETERIA",
+    "cuisineTypes": [
+      "MULTINATIONAL"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Twilight Treats",
+    "kind": "RESTAURANT",
+    "land": "TWILIGHT_GARDENS",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Valley Canteen",
+    "kind": "RESTAURANT",
+    "land": "VALLEY_OF_FORTUNE",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Valley Grill",
+    "kind": "RESTAURANT",
+    "land": "VALLEY_OF_FORTUNE",
+    "serviceType": "KIOSK",
+    "cuisineTypes": [
+      "INDIAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Waha Café",
+    "kind": "RESTAURANT",
+    "land": "DISCOVERY_SPRINGS",
+    "serviceType": "FAST_FOOD",
+    "cuisineTypes": [
+      "NORTH_AMERICAN"
+    ],
+    "shopTypes": [],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Bazaar Gifts",
+    "kind": "SHOP",
+    "land": "CITADEL",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "KIOSK"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Citadel Gifts",
+    "kind": "SHOP",
+    "land": "CITADEL",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "SPECIALTY_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Coaster Candy",
+    "kind": "SHOP",
+    "land": "TWILIGHT_GARDENS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Colossus Gifts",
+    "kind": "SHOP",
+    "land": "GRAND_EXPOSITION",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Discovery Springs Market",
+    "kind": "SHOP",
+    "land": "DISCOVERY_SPRINGS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Exposition Emporium",
+    "kind": "SHOP",
+    "land": "GRAND_EXPOSITION",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Falcons Flight Gear",
+    "kind": "SHOP",
+    "land": "CITY_OF_THRILLS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "G-Force Shop",
+    "kind": "SHOP",
+    "land": "CITY_OF_THRILLS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Garden Gifts",
+    "kind": "SHOP",
+    "land": "TWILIGHT_GARDENS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "KIOSK"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Grand Souvenirs",
+    "kind": "SHOP",
+    "land": "GRAND_EXPOSITION",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Iron Rattler Trading Post",
+    "kind": "SHOP",
+    "land": "STEAM_TOWN",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Lost Treasures",
+    "kind": "SHOP",
+    "land": "VALLEY_OF_FORTUNE",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Precious Cargo",
+    "kind": "SHOP",
+    "land": "VALLEY_OF_FORTUNE",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Saw Mill Supplies",
+    "kind": "SHOP",
+    "land": "STEAM_TOWN",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Sea Stallion Market",
+    "kind": "SHOP",
+    "land": "DISCOVERY_SPRINGS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Six Flags Emporium",
+    "kind": "SHOP",
+    "land": "CITADEL",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "FLAGSHIP"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Six Flags Gifts",
+    "kind": "SHOP",
+    "land": "CITADEL",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Six Flags Photos",
+    "kind": "SHOP",
+    "land": "CITADEL",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Spitfire Souvenirs",
+    "kind": "SHOP",
+    "land": "VALLEY_OF_FORTUNE",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE",
+      "PHOTO_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steam Town Mercantile",
+    "kind": "SHOP",
+    "land": "STEAM_TOWN",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steam Town Souvenirs",
+    "kind": "SHOP",
+    "land": "STEAM_TOWN",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Steel City Market",
+    "kind": "SHOP",
+    "land": "STEAM_TOWN",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "CART"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Thrillseeker Store",
+    "kind": "SHOP",
+    "land": "CITY_OF_THRILLS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "LAND_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  },
+  {
+    "name": "Twilight Fantasy",
+    "kind": "SHOP",
+    "land": "TWILIGHT_GARDENS",
+    "cuisineTypes": [],
+    "shopTypes": [
+      "RIDE_STORE"
+    ],
+    "status": "UNAVAILABLE",
+    "sourceUrl": "https://sixflagsqiddiyacity.com/en/explore/park-map"
+  }
+]

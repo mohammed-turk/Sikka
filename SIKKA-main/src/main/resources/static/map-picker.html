@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تحديد مواقع سكة</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 14px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        #coordinates {
+            direction: ltr;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        #map {
+            height: 80vh;
+            background: #151515;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <strong>اضغط على مدخل لعبة أو مرفق لتحديد موقعه</strong>
+    <div id="coordinates">mapX: — | mapY: —</div>
+</header>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    const imageWidth = 2048;
+    const imageHeight = 1271;
+
+    const map = L.map("map", {
+        crs: L.CRS.Simple,
+        minZoom: -3,
+        maxZoom: 3,
+        zoomSnap: 0.25
+    });
+
+    // أعلى يسار الصورة = (0, 0).
+    // نستخدم سالب Y داخل Leaflet حتى يزيد mapY باتجاه الأسفل.
+    const bounds = [
+        [-imageHeight, 0],
+        [0, imageWidth]
+    ];
+
+    L.imageOverlay("maps/park-map.jpg", bounds).addTo(map);
+    map.fitBounds(bounds);
+    map.setMaxBounds(bounds);
+
+    let selectedMarker = null;
+
+    map.on("click", function (event) {
+        const x = event.latlng.lng;
+        const y = -event.latlng.lat;
+
+        if (x < 0 || x > imageWidth || y < 0 || y > imageHeight) {
+            return;
+        }
+
+        const mapX = Number(x.toFixed(2));
+        const mapY = Number(y.toFixed(2));
+
+        if (selectedMarker !== null) {
+            map.removeLayer(selectedMarker);
+        }
+
+        selectedMarker = L.circleMarker([-mapY, mapX], {
+            radius: 7,
+            color: "#ffffff",
+            weight: 2,
+            fillColor: "#ff5722",
+            fillOpacity: 1
+        }).addTo(map);
+
+        document.getElementById("coordinates").textContent =
+            "mapX: " + mapX + " | mapY: " + mapY;
+    });
+</script>
+
+</body>
+</html>

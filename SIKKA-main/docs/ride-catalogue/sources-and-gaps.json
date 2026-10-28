@@ -1,0 +1,1703 @@
+{
+  "reviewedOn": "2026-10-24",
+  "revision": 2,
+  "sourcePolicy": "Use live official accessibility pages for published height and companion fields, supplement omitted limits from detailed PDF; preserve conflicts and manual review. This is a project source-selection policy, not operator confirmation that conflicting guidance was withdrawn.",
+  "coverage": {
+    "detailPagesRead": 32,
+    "accessibilityPagesRead": 28,
+    "carnivalAreasWithUnpublishedRequirements": 4,
+    "targetedArabicGuidePagesReviewed": 12
+  },
+  "rides": [
+    {
+      "sourceRideId": "falcons-flight",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/falcons-flight",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Falcons-Flight-Accessibility",
+      "guidePage": 13,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 320,
+          "scope": "VEHICLE"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 320 كجم، نطاق التطبيق VEHICLE؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Falcons-Flight-Accessibility",
+          "sourceValue": "130-196 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Falcons-Flight-Accessibility",
+          "sourceValue": "Not required"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Falcons-Flight-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=13",
+          "guidePage": 13
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=12"
+    },
+    {
+      "sourceRideId": "sirocco-tower",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/sirocco-tower",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sirocco-Tower-Accessibility",
+      "guidePage": 17,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 135,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sirocco-Tower-Accessibility",
+          "sourceValue": "130-205 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sirocco-Tower-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=17",
+          "guidePage": 17
+        }
+      ]
+    },
+    {
+      "sourceRideId": "adrena-line",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/adrena-line",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adrena-Line-Accessibility",
+      "guidePage": 21,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "الدليل PDF: 105–205 سم؛ صفحة الإتاحة: 95–205 سم. القيم المدخلة تتبع صفحة الإتاحة كمرجع المشروع للطول؛ لا توجد إفادة من المشغل تلغي اختلاف المصدرين، وتبقى المراجعة الإضافية مطلوبة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adrena-Line-Accessibility",
+          "sourceValue": "95-205 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adrena-Line-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adrena-Line-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=21",
+          "guidePage": 21
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=20"
+    },
+    {
+      "sourceRideId": "windrider",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/windrider",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Windrider-Accessibility",
+      "guidePage": 25,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "قيود إضافية ظاهرة في PDF وغير مذكورة في قائمة الويب احتُفظ بها لحين توضيح المشغل: FEAR_OF_HEIGHTS, VERTIGO.",
+        "قابلية الدوار مذكورة رسميًا، لكنها غير ممثلة برمز مستقل في المودل الحالي؛ لم تُساوَ تلقائياً بدوار الحركة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Windrider-Accessibility",
+          "sourceValue": "Min 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Windrider-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Windrider-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=25",
+          "guidePage": 25
+        }
+      ]
+    },
+    {
+      "sourceRideId": "iron-rattler",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/iron-rattler",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Iron-Rattler-Accessibility",
+      "guidePage": 85,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "الدليل العربي ص83 يذكر 125–205 سم، بينما صفحة الإتاحة والإنجليزي يذكران 120–205 سم؛ اعتُمدت صفحة الإتاحة مع إبقاء اختلاف المصدر موثقاً.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Iron-Rattler-Accessibility",
+          "sourceValue": "120-205 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Iron-Rattler-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Iron-Rattler-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=85",
+          "guidePage": 85
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=83"
+    },
+    {
+      "sourceRideId": "saw-mill-falls",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/saw-mill-falls",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Saw-Mill-Falls-Accessibility",
+      "guidePage": 81,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "الدليل PDF: حد أدنى 100 سم؛ صفحة الإتاحة: 105 سم. القيم المدخلة تتبع صفحة الإتاحة كمرجع المشروع للطول؛ لا توجد إفادة من المشغل تلغي اختلاف المصدرين، وتبقى المراجعة الإضافية مطلوبة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "الدليل العربي ص79 يعرض 95–205 سم وعمر 4 مع مرافق/8 بدونه، بينما الإنجليزي ص81 يذكر أدنى 100 سم وتوصية 5 مع مرافق/8 بدونه؛ صفحة الإتاحة تعرض أدنى 105 سم. اعتُمد طول صفحة الإتاحة وبقي اختلاف العمر غير محسوم.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Saw-Mill-Falls-Accessibility",
+          "sourceValue": "Min. 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Saw-Mill-Falls-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Saw-Mill-Falls-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=81",
+          "guidePage": 81
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=79"
+    },
+    {
+      "sourceRideId": "sprockenator",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/sprockenator",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sprockenator-Accessibility",
+      "guidePage": 93,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "UNSPECIFIED"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "105–195 سم موثقة في صفحة الإتاحة؛ الدليل يذكر الحد الأدنى فقط، فلا يوجد تناقض رقمي مباشر.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 136 كجم، نطاق التطبيق UNSPECIFIED؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sprockenator-Accessibility",
+          "sourceValue": "105 - 195 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sprockenator-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sprockenator-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=93",
+          "guidePage": 93
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=91"
+    },
+    {
+      "sourceRideId": "steel-stampede",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/steel-stampede",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Steel-Stampede-Accessibility",
+      "guidePage": 89,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Steel-Stampede-Accessibility",
+          "sourceValue": "Min 95 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Steel-Stampede-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Steel-Stampede-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=89",
+          "guidePage": 89
+        }
+      ]
+    },
+    {
+      "sourceRideId": "adventure-junction",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/adventure-junction",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adventure-Junction-Accessibility",
+      "guidePage": 97,
+      "heightRuleStatus": "NONE",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "لا توجد قائمة قيود صحية صريحة في صفحة الإتاحة أو الدليل؛ عدم نشر القائمة لا يثبت انتفاء القيود.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adventure-Junction-Accessibility",
+          "sourceValue": "N/A"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adventure-Junction-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Adventure-Junction-Accessibility",
+          "mappedCodes": []
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=97",
+          "guidePage": 97
+        }
+      ]
+    },
+    {
+      "sourceRideId": "steam-town-carnival-games",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/steam-town-carnival-games",
+      "accessibilityPage": null,
+      "guidePage": null,
+      "heightRuleStatus": "UNKNOWN",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [],
+      "notes": [
+        "الصفحة الرسمية تصنفه منطقة أركيد/كرنفال وتعرض وصفاً عاماً، ولا تنشر شروط الطول والوزن والعمر والصحة والمرافق لكل نشاط. رابط الإتاحة يحيل للدليل العام فقط؛ لا يمكن استنتاج NONE من الحقول الفارغة."
+      ],
+      "evidence": [
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/steam-town-carnival-games",
+          "guidePage": null
+        }
+      ]
+    },
+    {
+      "sourceRideId": "amirat-al-buhayra",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/amirat-al-buhayra",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Amirat-AlBuhayra-Accessibility",
+      "guidePage": 73,
+      "heightRuleStatus": "NONE",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Amirat-AlBuhayra-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Amirat-AlBuhayra-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=73",
+          "guidePage": 73
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=71"
+    },
+    {
+      "sourceRideId": "kaleidoscope-balloons",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/kaleidoscope-balloons",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Kaleidoscope-Balloons-Accessibility",
+      "guidePage": 77,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=75"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الحد الأقصى بالغ واحد لكل عربة؛ هذا قيد إشغال لا عمر رقمي. بقيت مجموعة العمر غير محسومة.",
+        "حُسم نطاق الوزن من الدليل العربي صفحة 75: 136 كجم لكل شخص. يبقى بالغ واحد كحد أقصى لكل عربة."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Kaleidoscope-Balloons-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Kaleidoscope-Balloons-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Kaleidoscope-Balloons-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=77",
+          "guidePage": 77
+        },
+        {
+          "field": "maxWeightKg",
+          "value": 136,
+          "scope": "PERSON",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=75"
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=75"
+    },
+    {
+      "sourceRideId": "the-enchanted-greenhouse",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/the-enchanted-greenhouse",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/The-Enchanted-Greenhouse-Accessibility",
+      "guidePage": 69,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 540,
+          "scope": "COMBINED"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 540 كجم، نطاق التطبيق COMBINED؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/The-Enchanted-Greenhouse-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/The-Enchanted-Greenhouse-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/The-Enchanted-Greenhouse-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=69",
+          "guidePage": 69
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=67"
+    },
+    {
+      "sourceRideId": "twilight-express",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/twilight-express",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Twilight-Expres-Accessibility",
+      "guidePage": 65,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Twilight-Expres-Accessibility",
+          "sourceValue": "95-205 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Twilight-Expres-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Twilight-Expres-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=65",
+          "guidePage": 65
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=63"
+    },
+    {
+      "sourceRideId": "twilight-gardens-carnival-games",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/twilight-gardens-carnival-games",
+      "accessibilityPage": null,
+      "guidePage": null,
+      "heightRuleStatus": "UNKNOWN",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [],
+      "notes": [
+        "الصفحة الرسمية تصنفه منطقة أركيد/كرنفال وتعرض وصفاً عاماً، ولا تنشر شروط الطول والوزن والعمر والصحة والمرافق لكل نشاط. رابط الإتاحة يحيل للدليل العام فقط؛ لا يمكن استنتاج NONE من الحقول الفارغة."
+      ],
+      "evidence": [
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/twilight-gardens-carnival-games",
+          "guidePage": null
+        }
+      ]
+    },
+    {
+      "sourceRideId": "big-splash",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/big-splash",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Big-Splash-Accessibility",
+      "guidePage": 112,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON"
+        },
+        {
+          "maxKg": 1500,
+          "scope": "COMBINED_20_GUESTS"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "احتفظنا بالحد الأعلى 185 سم من الدليل المفصل؛ عرض الحد الأدنى فقط على الموقع لا يلغي الحد الأعلى.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 1500 كجم، نطاق التطبيق COMBINED_20_GUESTS؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Big-Splash-Accessibility",
+          "sourceValue": "Min. 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Big-Splash-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Big-Splash-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=112",
+          "guidePage": 112
+        }
+      ]
+    },
+    {
+      "sourceRideId": "into-the-deep",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/into-the-deep",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Into-the-Deep-Accessibility",
+      "guidePage": 108,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Into-the-Deep-Accessibility",
+          "sourceValue": "100-200 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Into-the-Deep-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Into-the-Deep-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=108",
+          "guidePage": 108
+        }
+      ]
+    },
+    {
+      "sourceRideId": "sea-stallion",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/sea-stallion",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sea-Stallion-Accessibility",
+      "guidePage": 100,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "SEAT"
+        },
+        {
+          "maxKg": 200,
+          "scope": "VEHICLE"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 136 كجم، نطاق التطبيق SEAT؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "وزن منشور: 200 كجم، نطاق التطبيق VEHICLE؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "الأعمار الموصى بها محفوظة كتوصيات؛ ليست حداً عمرياً إلزامياً.",
+        "العمر في الدليل الإنجليزي موصوف كتوصية، بينما الدليل العربي يعرضه كحد أدنى؛ لا نؤكد عدم وجود شرط عمر إلزامي. بقيت التوصيات الإنجليزية محفوظة، ومجموعة العمر UNKNOWN إلى توضيح هذا الاختلاف.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sea-Stallion-Accessibility",
+          "sourceValue": "120-195 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sea-Stallion-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Sea-Stallion-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=100",
+          "guidePage": 100
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=98"
+    },
+    {
+      "sourceRideId": "water-wheel",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/water-wheel",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Water-Wheel-Accessibility",
+      "guidePage": 116,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "UNSPECIFIED"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 136 كجم، نطاق التطبيق UNSPECIFIED؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Water-Wheel-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Water-Wheel-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Water-Wheel-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=116",
+          "guidePage": 116
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=114"
+    },
+    {
+      "sourceRideId": "zoomaflooma",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/zoomaflooma",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Zoomaflooma-Accessibility",
+      "guidePage": 104,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "الدليل PDF: حد أدنى 90 سم؛ صفحة الإتاحة: 105 سم. القيم المدخلة تتبع صفحة الإتاحة كمرجع المشروع للطول؛ لا توجد إفادة من المشغل تلغي اختلاف المصدرين، وتبقى المراجعة الإضافية مطلوبة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Zoomaflooma-Accessibility",
+          "sourceValue": "Min 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Zoomaflooma-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Zoomaflooma-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=104",
+          "guidePage": 104
+        }
+      ]
+    },
+    {
+      "sourceRideId": "aquatopia",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/aquatopia",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Aquatopia-Accessibility",
+      "guidePage": 120,
+      "heightRuleStatus": "NONE",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "لا توجد قائمة قيود صحية صريحة في صفحة الإتاحة أو الدليل؛ عدم نشر القائمة لا يثبت انتفاء القيود.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Aquatopia-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Aquatopia-Accessibility",
+          "mappedCodes": []
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=120",
+          "guidePage": 120
+        }
+      ]
+    },
+    {
+      "sourceRideId": "arabian-carousel",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/arabian-carousel",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Arabian-Carousel-Accessibility",
+      "guidePage": 37,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Arabian-Carousel-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Arabian-Carousel-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Arabian-Carousel-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=37",
+          "guidePage": 37
+        }
+      ]
+    },
+    {
+      "sourceRideId": "colossus",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/colossus",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Colossus-Accessibility",
+      "guidePage": 29,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "الدليل PDF: 120–190 سم؛ صفحة الإتاحة: 120–196 سم. القيم المدخلة تتبع صفحة الإتاحة كمرجع المشروع للطول؛ لا توجد إفادة من المشغل تلغي اختلاف المصدرين، وتبقى المراجعة الإضافية مطلوبة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Colossus-Accessibility",
+          "sourceValue": "120-196 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Colossus-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Colossus-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=29",
+          "guidePage": 29
+        }
+      ]
+    },
+    {
+      "sourceRideId": "expo-flyer",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/expo-flyer",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Expo-Flyer-Accessibility",
+      "guidePage": 45,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "قابلية الدوار مذكورة رسميًا، لكنها غير ممثلة برمز مستقل في المودل الحالي؛ لم تُساوَ تلقائياً بدوار الحركة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "من هم دون 130 سم يركبون مع البالغ في المقعد المزدوج."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Expo-Flyer-Accessibility",
+          "sourceValue": "Min 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Expo-Flyer-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Expo-Flyer-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=45",
+          "guidePage": 45
+        }
+      ]
+    },
+    {
+      "sourceRideId": "gyrospin",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/gyrospin",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Gyrospin-Accessibility",
+      "guidePage": 33,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 135,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "قابلية الدوار مذكورة رسميًا، لكنها غير ممثلة برمز مستقل في المودل الحالي؛ لم تُساوَ تلقائياً بدوار الحركة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Gyrospin-Accessibility",
+          "sourceValue": "135-200 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Gyrospin-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=33",
+          "guidePage": 33
+        }
+      ]
+    },
+    {
+      "sourceRideId": "roundabout",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/roundabout",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Roundabout-Accessibility",
+      "guidePage": 41,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Roundabout-Accessibility",
+          "sourceValue": "Min 105 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Roundabout-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Roundabout-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=41",
+          "guidePage": 41
+        }
+      ]
+    },
+    {
+      "sourceRideId": "grand-exposition-carnival-games",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/grand-exposition-carnival-games",
+      "accessibilityPage": null,
+      "guidePage": null,
+      "heightRuleStatus": "UNKNOWN",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [],
+      "notes": [
+        "الصفحة الرسمية تصنفه منطقة أركيد/كرنفال وتعرض وصفاً عاماً، ولا تنشر شروط الطول والوزن والعمر والصحة والمرافق لكل نشاط. رابط الإتاحة يحيل للدليل العام فقط؛ لا يمكن استنتاج NONE من الحقول الفارغة."
+      ],
+      "evidence": [
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/grand-exposition-carnival-games",
+          "guidePage": null
+        }
+      ]
+    },
+    {
+      "sourceRideId": "canyon-charters",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/canyon-charters",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Canyon-Charters-Accessibility",
+      "guidePage": 57,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "SPECIFIED",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 136,
+          "scope": "PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "قابلية الدوار مذكورة رسميًا، لكنها غير ممثلة برمز مستقل في المودل الحالي؛ لم تُساوَ تلقائياً بدوار الحركة.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Canyon-Charters-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Canyon-Charters-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Canyon-Charters-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=57",
+          "guidePage": 57
+        }
+      ]
+    },
+    {
+      "sourceRideId": "skywatch",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/skywatch",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Skywatch-Accessibility",
+      "guidePage": 53,
+      "heightRuleStatus": "NONE",
+      "weightRuleStatus": "NONE",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "قيود إضافية ظاهرة في PDF وغير مذكورة في قائمة الويب احتُفظ بها لحين توضيح المشغل: UNDER_INFLUENCE.",
+        "أضيف HIGH_BLOOD_PRESSURE من صفحة الإتاحة؛ أبقي UNDER_INFLUENCE المذكور في PDF.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها."
+      ],
+      "evidence": [
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Skywatch-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Skywatch-Accessibility",
+          "mappedCodes": [
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=53",
+          "guidePage": 53
+        }
+      ]
+    },
+    {
+      "sourceRideId": "spitfire",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/spitfire",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Spitfire-Accessibility",
+      "guidePage": 49,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 80,
+          "scope": "AVERAGE_PER_PERSON"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities"
+      ],
+      "notes": [
+        "الدليل PDF: حد أدنى 105 سم؛ صفحة الإتاحة: 130–196 سم. القيم المدخلة تتبع صفحة الإتاحة كمرجع المشروع للطول؛ لا توجد إفادة من المشغل تلغي اختلاف المصدرين، وتبقى المراجعة الإضافية مطلوبة.",
+        "الدليل يشترط مرافقاً دون 130 سم؛ يبقى الشرط موثقاً، لكنه لا يجعل من هم دون الحد الأدنى الحالي مؤهلين للركوب.",
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 80 كجم، نطاق التطبيق AVERAGE_PER_PERSON؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي.",
+        "العربي ص48 يؤيد طول 130–196 سم ويذكر 80 كجم لكل شخص كحد أقصى؛ الإنجليزي يصف الوزن كمتوسط أقصى 80، لذلك لم يحوّل إلى حد فردي محسوم.",
+        "راجعت الصفحة العربية ذات الصلة أيضاً؛ تاريخ المراجعة لا يثبت أن إحدى النسختين تلغي الأخرى."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Spitfire-Accessibility",
+          "sourceValue": "130-196 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Spitfire-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "VERTIGO",
+            "FEAR_OF_HEIGHTS",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=49",
+          "guidePage": 49
+        }
+      ],
+      "additionalArabicGuideSource": "https://sixflagsqiddiyacity.com/content/dam/sixflags/ar/pdfs/accessibility/full-guide/SF_AR_Accessibility%20Guide.pdf#page=48"
+    },
+    {
+      "sourceRideId": "treasure-trail",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/treasure-trail",
+      "accessibilityPage": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Treasure-Trail-Accessibility",
+      "guidePage": 61,
+      "heightRuleStatus": "SPECIFIED",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "NONE",
+      "healthRuleStatus": "SPECIFIED",
+      "publishedWeightLimits": [
+        {
+          "maxKg": 368,
+          "scope": "VEHICLE"
+        }
+      ],
+      "additionalAccessibilitySections": [
+        "Attraction access for people with disabilities",
+        "People with disabilities",
+        "Amputations",
+        "Prosthesis",
+        "Other",
+        "Evacuation procedure for people with disabilities "
+      ],
+      "notes": [
+        "متطلبات الإتاحة والتثبيت والمرافق بحسب حالة الزائر تحتاج تحقق موظف اللعبة؛ لا تغطيها الحقول الرقمية وحدها.",
+        "وزن منشور: 368 كجم، نطاق التطبيق VEHICLE؛ محفوظ في التوثيق، وليس كحد وزن فردي آلي."
+      ],
+      "evidence": [
+        {
+          "field": "height",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Treasure-Trail-Accessibility",
+          "sourceValue": "Min 90 cm"
+        },
+        {
+          "field": "adultCompanion",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Treasure-Trail-Accessibility",
+          "sourceValue": "Required if below 130 cm"
+        },
+        {
+          "field": "healthRestrictions",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/accessibility/Treasure-Trail-Accessibility",
+          "mappedCodes": [
+            "HEART_CONDITION",
+            "BACK_CONDITION",
+            "NECK_CONDITION",
+            "PREGNANCY",
+            "HIGH_BLOOD_PRESSURE",
+            "RECENT_SURGERY",
+            "ARM_OR_LEG_CAST",
+            "UNDER_INFLUENCE"
+          ]
+        },
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/content/dam/sixflags/en/pdfs/accessibility/full-guide/SF_EN_Accessibility%20Guide%20full.pdf#page=61",
+          "guidePage": 61
+        }
+      ]
+    },
+    {
+      "sourceRideId": "citadel-thrills-and-skills-land",
+      "detailPage": "https://sixflagsqiddiyacity.com/en/explore/rides/citadel-thrills-and-skills-land",
+      "accessibilityPage": null,
+      "guidePage": null,
+      "heightRuleStatus": "UNKNOWN",
+      "weightRuleStatus": "UNKNOWN",
+      "ageRuleStatus": "UNKNOWN",
+      "healthRuleStatus": "UNKNOWN",
+      "publishedWeightLimits": [],
+      "additionalAccessibilitySections": [],
+      "notes": [
+        "الصفحة الرسمية تصنفه منطقة أركيد/كرنفال وتعرض وصفاً عاماً، ولا تنشر شروط الطول والوزن والعمر والصحة والمرافق لكل نشاط. رابط الإتاحة يحيل للدليل العام فقط؛ لا يمكن استنتاج NONE من الحقول الفارغة."
+      ],
+      "evidence": [
+        {
+          "field": "weightAndAge",
+          "source": "https://sixflagsqiddiyacity.com/en/explore/rides/citadel-thrills-and-skills-land",
+          "guidePage": null
+        }
+      ]
+    }
+  ]
+}
