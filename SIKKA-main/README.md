@@ -114,6 +114,314 @@ flowchart TD
     L --> M[Rate and review the visit]
     H --> N[Calendar sync / export]
 ```
+## Use Case Diagram
+
+Sikka has three visit types, so the actors are separated by the type of visit they run.
+
+```mermaid
+flowchart LR
+    Solo((Solo Visitor))
+    Family((Family Organizer))
+    Friends((Friends Organizer))
+    Member((Group Member))
+    Admin((Admin))
+    Ext[[External Services<br/>OpenAI, WhatsApp, Gmail, Moyasar,<br/>Prayer Times, Google Calendar, n8n]]
+
+    subgraph Common[All visitors]
+        direction TB
+        C1([Register & Verify Account])
+        C2([Manage Profile & Preferences])
+        C3([Select Rides & Exclude Rides])
+        C4([Pay for Visit])
+        C5([Generate Plan])
+        C6([Run Visit with GPS])
+        C7([Receive Notifications])
+        C8([Sync Plan to Calendar])
+        C9([Rate Rides & Visit])
+    end
+
+    subgraph SoloUC[Solo visit]
+        direction TB
+        S1([Create SOLO Visit])
+    end
+
+    subgraph FamilyUC[Family visit]
+        direction TB
+        F1([Create FAMILY Visit])
+        F2([Save Family Members])
+        F3([Add Family Members to Visit])
+        F4([Approve Plan for the Family])
+        F5([Remind Members to Answer])
+    end
+
+    subgraph FriendsUC[Friends visit]
+        direction TB
+        G1([Create FRIENDS Visit])
+        G2([Invite by Code / QR / Link])
+        G3([Manage Members & Invitations])
+        G4([Choose Together or Split Mode])
+        G5([Request Group Plan Approval])
+        G6([Remind Members to Answer])
+    end
+
+    subgraph MemberUC[Joining a visit]
+        direction TB
+        M1([Join with Code / QR / Link])
+        M2([RSVP Going / Maybe / Not Going])
+        M3([Approve or Reject Group Plan])
+    end
+
+    subgraph AdminUC[Administration]
+        direction TB
+        A1([Manage Rides & Places])
+        A2([Update Waiting Times & Status])
+    end
+
+    Solo --> S1
+    Family --> F1
+    Family --> F2
+    Family --> F3
+    Family --> F4
+    Family --> F5
+    Friends --> G1
+    Friends --> G2
+    Friends --> G3
+    Friends --> G4
+    Friends --> G5
+    Friends --> G6
+    Member --> M1
+    Member --> M2
+    Member --> M3
+    Admin --> A1
+    Admin --> A2
+
+    Solo --> Common
+    Family --> Common
+    Friends --> Common
+    Member --> Common
+
+    C1 -.-> Ext
+    C4 -.-> Ext
+    C5 -.-> Ext
+    C7 -.-> Ext
+    C8 -.-> Ext
+```
+
+| Actor | Visit type | What is different |
+|---|---|---|
+| **Solo Visitor** | SOLO | No group and no invitations; one individual plan |
+| **Family Organizer** | FAMILY | Adds saved family members (children and adults) to the visit, chooses the rides for the family, reminds members to answer, and approves the plan for them |
+| **Friends Organizer** | FRIENDS | Creates the group, invites by code / QR / link, chooses together or split mode, reminds members to answer, requests group approval |
+| **Group Member** | FRIENDS / FAMILY | Joins an existing visit, answers RSVP, selects rides, approves or rejects plans |
+| **Admin** | None | Manages the ride and place catalogue |
+
+---
+
+## Class Diagram
+
+The diagram shows the **22 entities** of Sikka (key fields only) and their relationships, taken from the JPA mappings in the `Model/` package.
+
+```mermaid
+classDiagram
+    class Account {
+        +Integer id
+        +String name
+        +String email
+        +String phone
+        +String role
+        +String status
+        +Boolean emailVerified
+        +Boolean phoneVerified
+        +String phoneCodeHash
+    }
+    class VisitorProfile {
+        +Integer id
+        +LocalDate birthDate
+        +BigDecimal heightCm
+        +BigDecimal weightKg
+        +String gender
+        +String thrillPreference
+        +String foodPreferences
+        +String healthData
+    }
+    class FamilyMember {
+        +Integer id
+        +String name
+        +LocalDate birthDate
+        +BigDecimal heightCm
+        +BigDecimal weightKg
+    }
+    class VisitGroup {
+        +Integer id
+        +String name
+        +Boolean invitationsEnabled
+        +String inviteCodeHash
+    }
+    class Visit {
+        +Integer id
+        +String name
+        +LocalDate visitDate
+        +String tripType
+        +String togetherMode
+        +LocalTime expectedArrivalTime
+        +Integer durationMinutes
+        +String status
+        +Integer maxParticipants
+    }
+    class VisitMember {
+        +Integer id
+        +String rsvpStatus
+        +String selectedRides
+        +String answerStatus
+        +String preferences
+        +LocalDateTime checkedInAt
+    }
+    class VisitPlan {
+        +Integer id
+        +String planKind
+        +String timingMode
+        +Boolean isActive
+        +String excludedRides
+    }
+    class PlanItem {
+        +Integer id
+        +String activityKind
+        +LocalDateTime startsAt
+        +LocalDateTime endsAt
+        +Integer waitingMinutes
+        +Integer walkingMinutes
+    }
+    class PlanApproval {
+        +Integer id
+        +String status
+        +String approvalScope
+    }
+    class PlanHistory {
+        +Integer id
+        +String operationType
+        +String status
+        +String billingMode
+    }
+    class VisitRecord {
+        +Integer id
+        +String status
+        +Integer rating
+    }
+    class ActivitySession {
+        +Integer id
+        +String status
+        +String trackingMode
+        +Double lastLatitude
+        +Double lastLongitude
+    }
+    class VisitMealBreak {
+        +Integer id
+        +String mealChoice
+        +String preferredTiming
+    }
+    class Notification {
+        +Integer id
+        +String channel
+        +String type
+        +String status
+    }
+    class GoogleCalendarConnection {
+        +Integer accountId
+        +String encryptedRefreshToken
+    }
+    class GoogleCalendarEvent {
+        +Integer id
+        +String googleEventId
+    }
+    class GoogleCalendarOAuthState {
+        +String stateHash
+        +LocalDateTime expiresAt
+        +Boolean consumed
+    }
+    class Ride {
+        +Integer id
+        +String name
+        +String category
+        +String thrillLevel
+        +String status
+        +Integer waitMinutes
+        +String queueAnalyticsRideId
+    }
+    class RidePreference {
+        +Integer id
+        +String preference
+    }
+    class Place {
+        +Integer id
+        +String name
+        +String kind
+        +String status
+    }
+    class PaymentOrder {
+        +Integer id
+        +BigDecimal amountSar
+        +String status
+        +String moyasarPaymentId
+        +String kind
+    }
+    class PrivacyConsent {
+        +Integer id
+        +String consentKind
+        +Boolean granted
+    }
+
+    Account "1" --> "1" VisitorProfile : has
+    Account "1" --> "0..*" FamilyMember : owns
+    Account "1" --> "0..*" Visit : organizes
+    Account "1" --> "0..*" VisitGroup : organizes
+    Account "1" --> "0..*" PaymentOrder : buys
+    Account "1" --> "0..*" Notification : receives
+    Account "1" --> "0..*" PrivacyConsent : grants
+    Account "1" --> "0..*" PlanHistory : generates
+    Account "1" --> "0..*" PlanApproval : requests / approves
+    Account "1" --> "0..*" VisitRecord : records
+
+    FamilyMember "0..*" --> "0..1" VisitorProfile : linked to
+
+    Visit "1" --> "0..1" VisitGroup : has
+    Visit "1" --> "1..*" VisitMember : includes
+    Visit "1" --> "0..*" VisitPlan : has
+    Visit "1" --> "0..*" PaymentOrder : paid by
+    Visit "1" --> "0..*" PlanHistory : planned by
+    Visit "1" --> "0..*" VisitMealBreak : has
+    Visit "1" --> "0..*" Notification : about
+
+    VisitMember "0..*" --> "0..1" VisitorProfile : uses
+    VisitMember "0..*" --> "0..1" FamilyMember : represents
+    VisitMember "1" --> "0..*" VisitRecord : records
+    VisitMember "1" --> "0..*" ActivitySession : performs
+    VisitMember "1" --> "0..*" VisitPlan : owns
+    VisitMember "1" --> "0..*" VisitMealBreak : eats
+
+    VisitPlan "1" --> "0..*" PlanItem : contains
+    VisitPlan "1" --> "0..1" PlanApproval : needs
+    VisitPlan "0..*" --> "0..1" PlanHistory : generated by
+    PlanHistory "0..1" --> "0..1" PaymentOrder : consumes
+    PlanItem "0..*" --> "0..1" Ride : uses
+    PlanItem "0..*" --> "0..1" Place : uses
+    PlanItem "1" --> "0..*" ActivitySession : tracked by
+    PlanItem "1" --> "0..*" VisitRecord : completed as
+    ActivitySession "0..*" --> "0..1" Ride : at
+    ActivitySession "0..*" --> "0..1" Place : at
+    VisitRecord "0..1" --> "1" ActivitySession : from
+    VisitMealBreak "0..*" --> "0..1" Place : at
+
+    Account "1" --> "0..1" GoogleCalendarConnection : connects
+    Account "1" --> "0..*" GoogleCalendarOAuthState : starts
+    Account "1" --> "0..*" GoogleCalendarEvent : owns
+    Visit "1" --> "0..*" GoogleCalendarEvent : synced as
+
+    VisitorProfile "1" --> "0..*" RidePreference : sets
+    Ride "1" --> "0..*" RidePreference : receives
+    VisitorProfile "1" --> "0..*" PrivacyConsent : about
+```
+
+---
 
 ## Architecture
 
